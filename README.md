@@ -11,7 +11,7 @@ I am a passionate web and software developer who enjoys coding and crafting high
 * ✉️  You can contact me at [arashjamshidi12@gmail.com](mailto:arashjamshidi12@gmail.com)
 * 🚀  I'm currently working on [Full-Stack e-commerce web app with React, node.js, Sanity](http://404.com)
 * 🧠  I'm learning NextJs, TypeScript
-* 🤝  I'm open to collaborating on Projects
+* 🤝  I'm open to collaborating on Projects 
 
 ### Skills
 
