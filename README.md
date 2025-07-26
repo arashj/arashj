@@ -1,27 +1,245 @@
+# React Query + Redux Toolkit Implementation
 
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Arash
-=============================================================================================================================
+A comprehensive example demonstrating the integration of **React Query (TanStack Query)** with **Redux Toolkit** for modern state management in React applications.
 
-Web and Software Developer
---------------------------
+## 🚀 Features
 
-I am a passionate web and software developer who enjoys coding and crafting high-quality, scalable solutions. With expertise in ReactJS, JavaScript, Python, and C#, I enjoy crafting dynamic and user-friendly applications that meet both technical and business needs. My commitment to clean code, modern development practices, and continuous learning drives my ability to create efficient, maintainable, and impactful products across diverse projects.
+- **React Query** for server state management
+- **Redux Toolkit** for client state management
+- **TypeScript** for type safety
+- **Axios** for HTTP requests
+- **Modern UI** with responsive design
+- **Loading & Error States** handling
+- **Caching & Background Updates**
+- **Developer Tools** integration
 
-* 🌍  I'm based in Montreal, QC, Canada
-* ✉️  You can contact me at [arashjamshidi12@gmail.com](mailto:arashjamshidi12@gmail.com)
-* 🚀  I'm currently working on [Full-Stack e-commerce web app with React, node.js, Sanity](http://404.com)
-* 🧠  I'm learning NextJs, TypeScript
-* 🤝  I'm open to collaborating on Projects 
+## 🏗️ Architecture
 
-### Skills
+This project demonstrates the separation of concerns between:
 
+- **Server State** (React Query): API data, caching, synchronization
+- **Client State** (Redux): UI state, user preferences, local data
 
-<p align="left">
-<a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" width="36" height="36" alt="C#" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a><a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/redux-colored.svg" width="36" height="36" alt="Redux" /></a><a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a><a href="https://nextjs.org/docs" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="36" height="36" alt="NextJs" /></a><a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a><a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
-</p>
+## 📁 Project Structure
 
+```
+src/
+├── components/           # React components
+│   ├── Counter.tsx      # Redux-only component
+│   ├── UserList.tsx     # React Query + Redux integration
+│   └── UserDetail.tsx   # Combined state management
+├── hooks/               # Custom hooks
+│   ├── redux.ts         # Typed Redux hooks
+│   ├── useUsers.ts      # React Query hooks for users
+│   └── usePosts.ts      # React Query hooks for posts
+├── services/            # API services
+│   └── api.ts           # Axios configuration and API calls
+├── store/               # Redux store configuration
+│   ├── store.ts         # Store setup
+│   └── slices/          # Redux slices
+│       ├── userSlice.ts # User-related state
+│       └── counterSlice.ts # Counter state
+└── App.tsx              # Main application component
+```
 
-### Socials
+## 🔧 Key Implementation Details
 
-<p align="left"> <a href="https://www.github.com/arashj" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /> </picture> </a> <a href="https://www.linkedin.com/in/arash-jamshidi12/" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /> </picture> </a></p>
+### Redux Store Configuration
+
+```typescript
+import { configureStore } from '@reduxjs/toolkit';
+import userSlice from './slices/userSlice';
+import counterSlice from './slices/counterSlice';
+
+export const store = configureStore({
+  reducer: {
+    user: userSlice,
+    counter: counterSlice,
+  },
+});
+```
+
+### React Query Setup
+
+```typescript
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      gcTime: 10 * 60 * 1000,   // 10 minutes
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+```
+
+### Custom Hooks Integration
+
+```typescript
+// React Query hook for fetching users
+export const useUsers = () => {
+  return useQuery({
+    queryKey: userKeys.lists(),
+    queryFn: fetchUsers,
+    staleTime: 5 * 60 * 1000,
+  });
+};
+
+// Redux hooks with TypeScript
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+```
+
+## 🎯 State Management Strategy
+
+### When to use React Query:
+- ✅ Server data fetching
+- ✅ Caching API responses
+- ✅ Background data synchronization
+- ✅ Loading and error states
+- ✅ Optimistic updates
+
+### When to use Redux:
+- ✅ Client-side state
+- ✅ UI state management
+- ✅ User preferences
+- ✅ Complex state logic
+- ✅ State that needs to persist
+
+## 🛠️ Available Scripts
+
+- `npm start` - Runs the development server
+- `npm build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App
+
+## 🌟 Features Demonstrated
+
+### 1. User Management (React Query + Redux)
+- Fetch users from JSONPlaceholder API
+- Cache and background refresh
+- Select users (Redux state)
+- Favorite users (Redux state)
+- Loading and error handling
+
+### 2. Posts Integration
+- Fetch posts by selected user
+- Conditional data fetching
+- Related data management
+
+### 3. Counter (Pure Redux)
+- Basic counter operations
+- Custom increment amounts
+- State persistence across navigation
+
+### 4. Developer Experience
+- TypeScript integration
+- React Query DevTools
+- Redux DevTools support
+- Hot reloading
+- Error boundaries
+
+## 🔍 Key Patterns
+
+### 1. Query Key Management
+```typescript
+export const userKeys = {
+  all: ['users'] as const,
+  lists: () => [...userKeys.all, 'list'] as const,
+  detail: (id: number) => [...userKeys.details(), id] as const,
+};
+```
+
+### 2. Mutation with Cache Updates
+```typescript
+export const useUpdateUser = () => {
+  const queryClient = useQueryClient();
+  
+  return useMutation({
+    mutationFn: updateUser,
+    onSuccess: (updatedUser) => {
+      queryClient.setQueryData(userKeys.detail(updatedUser.id), updatedUser);
+      queryClient.invalidateQueries({ queryKey: userKeys.lists() });
+    },
+  });
+};
+```
+
+### 3. Typed Redux Slices
+```typescript
+const userSlice = createSlice({
+  name: 'user',
+  initialState,
+  reducers: {
+    setSelectedUser: (state, action: PayloadAction<User | null>) => {
+      state.selectedUser = action.payload;
+    },
+    addToFavorites: (state, action: PayloadAction<number>) => {
+      if (!state.favorites.includes(action.payload)) {
+        state.favorites.push(action.payload);
+      }
+    },
+  },
+});
+```
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd react-query-redux-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+## 🔧 Dependencies
+
+### Core Dependencies
+- `react` & `react-dom` - React library
+- `@tanstack/react-query` - Server state management
+- `@reduxjs/toolkit` - Redux with modern APIs
+- `react-redux` - React bindings for Redux
+- `axios` - HTTP client
+- `typescript` - Type safety
+
+### Dev Dependencies
+- `@tanstack/react-query-devtools` - Query debugging
+- `@types/*` - TypeScript definitions
+
+## 📚 Learning Resources
+
+- [React Query Documentation](https://tanstack.com/query/latest)
+- [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
+- [TypeScript React Documentation](https://react-typescript-cheatsheet.netlify.app/)
+
+## 🤝 Best Practices Implemented
+
+1. **Separation of Concerns**: Server state vs Client state
+2. **Type Safety**: Full TypeScript integration
+3. **Performance**: Proper caching and memoization
+4. **Developer Experience**: DevTools integration
+5. **Error Handling**: Comprehensive error boundaries
+6. **Code Organization**: Modular file structure
+7. **Responsive Design**: Mobile-first approach
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Built with ❤️ using React Query + Redux Toolkit**
 
